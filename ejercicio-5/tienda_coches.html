@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de coches</title>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 90%;
+            margin: 20px;
+        }
+
+        .main-container {
+
+            max-width: 300px;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+        button {
+            padding: 12px 20px;
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 30px;
+            border: none;
+            background-color: #3374c3;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #244974;
+        }
+
+        select {
+            padding: 12px 5px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 15px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: #333;
+            box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="header">
+            <h1> TIENDA DE COCHES</h1>
+
+        </section>
+        <main class="main-container">
+            <label for="coches">Seleccione un coche:</label>
+            <select name="coches" id="coches">
+                <option value="">Seleccione un coche</option>
+                <option value="ford_fiesta">FORD FIESTA</option>
+                <option value="ford_focus">FORD FOCUS</option>
+                <option value="ford_escape">FORD ESCAPE</option>
+            </select>
+
+            <button onclick="calcularDescuento()">Calcular Descuento</button>
+
+            <br>
+            <br>
+            <p><strong>Coche:</strong><span id="cocheSeleccionado"></span></p>
+            <p><strong>Descuento aplicado:</strong> <span id="descuentoAplicado"></span></p>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
